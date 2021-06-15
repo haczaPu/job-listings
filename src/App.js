@@ -9,7 +9,7 @@ const App = () => {
   const [filteredOffers, setFilteredOffers] = useState([]);
   const offers = Data;
 
-  // Filtering offers
+  //Filtering offers
   useEffect(() => {
     const newFilteredOffers = offers.filter(offer => {
       const tags = [offer.level, offer.role].concat(offer.tools, offer.languages);
@@ -32,7 +32,6 @@ const App = () => {
   };
 
   //Remove filter tags
-
   const handleRemoveTag = e => {
     let newFilterTags = filterTags.filter(value => {
       return value !== e.currentTarget.parentElement.childNodes[0].textContent;
@@ -50,9 +49,7 @@ const App = () => {
           handleRemoveTag={handleRemoveTag}
         />
       </header>
-      <main>
-        <JobList filteredOffers={filteredOffers} handleAddTag={handleAddTag} />
-      </main>
+      <JobList filteredOffers={filteredOffers} handleAddTag={handleAddTag} />
     </div>
   );
 };

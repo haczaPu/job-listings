@@ -3,7 +3,7 @@ import React from "react";
 
 const JobList = ({ filteredOffers, handleAddTag }) => {
   return (
-    <div>
+    <main>
       {filteredOffers.map((job, i) => {
         return (
           <div className="job-offer" key={i} style={job.featured ? { borderLeft: "hsl(180, 29%, 50%) solid 5px" } : {}}>
@@ -44,7 +44,7 @@ const JobList = ({ filteredOffers, handleAddTag }) => {
           </div>
         );
       })}
-    </div>
+    </main>
   );
 };
 
